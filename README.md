@@ -1,6 +1,6 @@
 ## 数组
 
-[博客链接](https://deleter-d.github.io/posts/56699/)
+> [博客链接](https://deleter-d.github.io/posts/56699/)
 
 [704.二分查找](https://leetcode.cn/problems/binary-search/)
 
