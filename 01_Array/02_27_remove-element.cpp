@@ -1,7 +1,6 @@
 /*
     Topic link: https://leetcode.cn/problems/remove-element/
 */
-#include <algorithm>
 #include <iostream>
 #include <vector>
 using namespace std;
