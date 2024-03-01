@@ -12,11 +12,11 @@ int minSubArrayLen(int target, vector<int> &nums) {
     int sum = 0;
     int minlen = INT32_MAX;
     for (; fast < nums.size(); fast++) {
-        sum += nums[fast];
-        while (sum >= target) {
+        sum += nums[fast]; // 滑动窗口不断扩大，并将加入窗口的元素累加到sum中
+        while (sum >= target) { // 当窗口中的元素和满足条件后
             if ((fast - slow + 1) < minlen)
-                minlen = fast - slow + 1;
-            sum -= nums[slow];
+                minlen = fast - slow + 1; // 记录当前滑动窗口的大小
+            sum -= nums[slow]; // 将滑动窗口的左侧缩小一个元素
             slow++;
         }
     }
