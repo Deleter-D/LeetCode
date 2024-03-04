@@ -15,11 +15,11 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
     int size_A = 0,size_B =0;
     ListNode *ptrA = dummy_headA;
     ListNode *ptrB = dummy_headB;
-    while(ptrA->next != nullptr){
+    while(ptrA->next != nullptr){ // 统计链表A的长度
         ptrA = ptrA->next;
         size_A++;
     }
-    while(ptrB->next!=nullptr){
+    while(ptrB->next!=nullptr){ // 统计链表B的长度
         ptrB = ptrB->next;
         size_B++;
     }
@@ -27,6 +27,7 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
     ptrA = dummy_headA;
     ptrB = dummy_headB;
     int diff = abs(size_A -size_B);
+    // 令较长的链表先走长度差，使得ptrA和ptrB对于两个链表的末尾对齐
     if(size_A > size_B){
         for(int i=0;i<diff;i++){
             ptrA = ptrA ->next;
@@ -37,11 +38,13 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
         }   
     }
 
+    // 然后共同前进，直到指向的结点相同
     while(ptrA != ptrB){
         ptrA = ptrA->next;
         ptrB = ptrB->next;
     }
-
+    
+    // 若到末尾都不相同，此时ptrA指向nullptr，符合要求
     return ptrA;
 }
 

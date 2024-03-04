@@ -20,3 +20,6 @@ add_executable(06_intersection-of-two-linked-lists-lcci
                06_intersection-of-two-linked-lists-lcci.cpp)
 install(TARGETS 06_intersection-of-two-linked-lists-lcci
         DESTINATION 02_LinkedList)
+
+add_executable(07_142_linked-list-cycle-ii 07_142_linked-list-cycle-ii.cpp)
+install(TARGETS 07_142_linked-list-cycle-ii DESTINATION 02_LinkedList)
