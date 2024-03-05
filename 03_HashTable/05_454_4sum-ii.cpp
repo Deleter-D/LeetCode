@@ -26,4 +26,12 @@ int fourSumCount(vector<int> &nums1, vector<int> &nums2, vector<int> &nums3,
     return count;
 }
 
-int main(int argc, char *argv[]) { return 0; }
+int main(int argc, char *argv[]) {
+    vector<int> nums1{1, 2};
+    vector<int> nums2{-2, -1};
+    vector<int> nums3{-1, 2};
+    vector<int> nums4{0, 2};
+
+    cout << fourSumCount(nums1, nums2, nums3, nums4) << endl;
+    return 0;
+}

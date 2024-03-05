@@ -10,3 +10,9 @@ install(TARGETS 03_202_happy-number DESTINATION 03_HashTable)
 
 add_executable(04_1_two-sum 04_1_two-sum.cpp)
 install(TARGETS 04_1_two-sum DESTINATION 03_HashTable)
+
+add_executable(05_454_4sum-ii 05_454_4sum-ii.cpp)
+install(TARGETS 05_454_4sum-ii DESTINATION 03_HashTable)
+
+add_executable(06_383_ransom-note 06_383_ransom-note.cpp)
+install(TARGETS 06_383_ransom-note DESTINATION 03_HashTable)
