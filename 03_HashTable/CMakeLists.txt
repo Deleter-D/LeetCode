@@ -16,3 +16,9 @@ install(TARGETS 05_454_4sum-ii DESTINATION 03_HashTable)
 
 add_executable(06_383_ransom-note 06_383_ransom-note.cpp)
 install(TARGETS 06_383_ransom-note DESTINATION 03_HashTable)
+
+add_executable(07_15_3sum 07_15_3sum.cpp)
+install(TARGETS 07_15_3sum DESTINATION 03_HashTable)
+
+add_executable(08_18_4sum 08_18_4sum.cpp)
+install(TARGETS 08_18_4sum DESTINATION 03_HashTable)
