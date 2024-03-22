@@ -58,3 +58,10 @@ install(TARGETS 13_226_invert-binary-tree DESTINATION 06_BinaryTree)
 
 add_executable(14_101_symmetric-tree 14_101_symmetric-tree.cpp)
 install(TARGETS 14_101_symmetric-tree DESTINATION 06_BinaryTree)
+
+add_executable(15_222_count-complete-tree-nodes
+               15_222_count-complete-tree-nodes.cpp)
+install(TARGETS 15_222_count-complete-tree-nodes DESTINATION 06_BinaryTree)
+
+add_executable(16_110_balanced-binary-tree 16_110_balanced-binary-tree.cpp)
+install(TARGETS 16_110_balanced-binary-tree DESTINATION 06_BinaryTree)
