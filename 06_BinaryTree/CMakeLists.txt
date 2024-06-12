@@ -65,3 +65,9 @@ install(TARGETS 15_222_count-complete-tree-nodes DESTINATION 06_BinaryTree)
 
 add_executable(16_110_balanced-binary-tree 16_110_balanced-binary-tree.cpp)
 install(TARGETS 16_110_balanced-binary-tree DESTINATION 06_BinaryTree)
+
+add_executable(17_257_binary-tree-paths 17_257_binary-tree-paths.cpp)
+install(TARGETS 17_257_binary-tree-paths DESTINATION 06_BinaryTree)
+
+add_executable(18_404_sum-of-left-leaves 18_404_sum-of-left-leaves.cpp)
+install(TARGETS 18_404_sum-of-left-leaves DESTINATION 06_BinaryTree)

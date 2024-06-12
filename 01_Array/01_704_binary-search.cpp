@@ -36,7 +36,7 @@ int search2(vector<int> &nums, int target) {
 }
 
 int main(int argc, char const *argv[]) {
-    vector<int> nums({-1, 0, 3, 5, 9, 12});
+    vector<int> nums{-1, 0, 3, 5, 9, 12};
     cout << search(nums, 2) << endl;
     cout << search2(nums, 2) << endl;
     return 0;

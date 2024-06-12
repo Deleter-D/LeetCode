@@ -2,6 +2,7 @@
     Topic link: https://leetcode.cn/problems/binary-tree-paths/
 */
 #include "../utils/TreeNode.h"
+#include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
@@ -45,6 +46,13 @@ int main(int argc, char *argv[]) {
     root->left = new TreeNode(2);
     root->right = new TreeNode(3);
     root->left->right = new TreeNode(5);
+
+    vector<string> res = binaryTreePaths(root);
+
+    for (auto str : res) {
+        cout << str << " ";
+    }
+    cout << endl;
 
     delete root->left->right;
     delete root->right;
