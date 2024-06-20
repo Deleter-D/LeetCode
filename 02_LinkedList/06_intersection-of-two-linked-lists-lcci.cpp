@@ -2,7 +2,7 @@
     Topic link:
    https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/
 */
-#include "../utils/ListNode.h"
+#include "utils/ListNode.h"
 #include <cstdlib>
 #include <iostream>
 #include <vector>

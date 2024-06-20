@@ -3,7 +3,7 @@
 cd ./build/
 cmake ..
 
-make
+make -j8
 make install
 
 cd ..

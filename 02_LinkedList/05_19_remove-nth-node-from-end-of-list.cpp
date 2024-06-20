@@ -1,7 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
 */
-#include "../utils/ListNode.h"
+#include "utils/ListNode.h"
 #include <iostream>
 using namespace std;
 

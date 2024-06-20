@@ -1,7 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/invert-binary-tree/
 */
-#include "../utils/TreeNode.h"
+#include "utils/TreeNode.h"
 #include <stack>
 #include <utility>
 using namespace std;

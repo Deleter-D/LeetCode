@@ -2,7 +2,7 @@
     Topic link:
    https://leetcode.cn/problems/binary-tree-level-order-traversal-ii/
 */
-#include "../utils/TreeNode.h"
+#include "utils/TreeNode.h"
 #include <algorithm>
 #include <iostream>
 #include <queue>

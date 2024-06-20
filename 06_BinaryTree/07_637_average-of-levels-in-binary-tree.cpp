@@ -1,7 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/average-of-levels-in-binary-tree/
 */
-#include "../utils/TreeNode.h"
+#include "utils/TreeNode.h"
 #include <iostream>
 #include <queue>
 #include <vector>

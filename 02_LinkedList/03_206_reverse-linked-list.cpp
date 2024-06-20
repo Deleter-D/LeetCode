@@ -1,7 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/reverse-linked-list/
 */
-#include "../utils/ListNode.h"
+#include "utils/ListNode.h"
 #include <iostream>
 using namespace std;
 

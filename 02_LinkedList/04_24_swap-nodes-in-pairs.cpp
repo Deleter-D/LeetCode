@@ -1,7 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/swap-nodes-in-pairs/
 */
-#include "../utils/ListNode.h"
+#include "utils/ListNode.h"
 #include <iostream>
 using namespace std;
 

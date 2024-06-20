@@ -1,7 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/balanced-binary-tree/
 */
-#include "../utils/TreeNode.h"
+#include "utils/TreeNode.h"
 #include <cstdlib>
 #include <iostream>
 using namespace std;

@@ -2,7 +2,7 @@
     Topic link:
     https://leetcode.cn/problems/find-largest-value-in-each-tree-row/
 */
-#include "../utils/TreeNode.h"
+#include "utils/TreeNode.h"
 #include <climits>
 #include <iostream>
 #include <queue>

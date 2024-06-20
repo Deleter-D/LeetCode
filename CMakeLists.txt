@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/executable)
 add_compile_options(-g)
 
-include_directories(utils)
+include_directories(${CMAKE_SOURCE_DIR})
 add_subdirectory(01_Array)
 add_subdirectory(02_LinkedList)
 add_subdirectory(03_HashTable)

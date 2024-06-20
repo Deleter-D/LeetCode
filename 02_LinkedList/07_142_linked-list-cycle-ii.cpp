@@ -1,7 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/linked-list-cycle-ii/
 */
-#include "../utils/ListNode.h"
+#include "utils/ListNode.h"
 #include <iostream>
 #include <vector>
 using namespace std;

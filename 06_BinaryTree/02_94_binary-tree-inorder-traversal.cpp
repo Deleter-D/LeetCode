@@ -1,7 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/binary-tree-inorder-traversal/
 */
-#include "../utils/TreeNode.h"
+#include "utils/TreeNode.h"
 #include <iostream>
 #include <stack>
 #include <vector>

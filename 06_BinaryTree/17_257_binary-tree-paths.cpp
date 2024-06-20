@@ -1,7 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/binary-tree-paths/
 */
-#include "../utils/TreeNode.h"
+#include "utils/TreeNode.h"
 #include <iostream>
 #include <string>
 #include <vector>

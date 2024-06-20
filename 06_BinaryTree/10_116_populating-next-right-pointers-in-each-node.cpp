@@ -2,7 +2,7 @@
     Topic link:
    https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/
 */
-#include "../utils/PerfectTreeNode.h"
+#include "utils/PerfectTreeNode.h"
 #include <queue>
 using namespace std;
 

@@ -1,7 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/sum-of-left-leaves/
 */
-#include "../utils/TreeNode.h"
+#include "utils/TreeNode.h"
 #include <iostream>
 #include <vector>
 using namespace std;

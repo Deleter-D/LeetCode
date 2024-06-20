@@ -1,7 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/count-complete-tree-nodes/
 */
-#include "../utils/TreeNode.h"
+#include "utils/TreeNode.h"
 #include <iostream>
 using namespace std;
 

@@ -1,7 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/remove-linked-list-elements/
 */
-#include "../utils/ListNode.h"
+#include "utils/ListNode.h"
 #include <iostream>
 using namespace std;
 

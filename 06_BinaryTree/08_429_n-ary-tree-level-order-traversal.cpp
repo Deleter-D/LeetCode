@@ -1,7 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/n-ary-tree-level-order-traversal/
 */
-#include "../utils/NaryTreeNode.h"
+#include "utils/NaryTreeNode.h"
 #include <iostream>
 #include <queue>
 #include <vector>

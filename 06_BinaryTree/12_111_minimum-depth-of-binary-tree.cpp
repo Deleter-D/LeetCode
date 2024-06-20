@@ -1,7 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/minimum-depth-of-binary-tree/
 */
-#include "../utils/TreeNode.h"
+#include "utils/TreeNode.h"
 #include <iostream>
 #include <queue>
 using namespace std;
