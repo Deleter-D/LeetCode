@@ -1,11 +1,15 @@
 /*
     Topic link: https://leetcode.cn/problems/binary-tree-paths/
 */
+<<<<<<< HEAD
 #include "utils/TreeNode.h"
+=======
+#include "../utils/TreeNode.h"
+    >>>>>>> 84a5879(update)
 #include <iostream>
 #include <string>
 #include <vector>
-using namespace std;
+                using namespace std;
 
 void traversal(TreeNode *node, vector<int> &path, vector<string> &res) {
     path.push_back(node->val); // 当前结点的值存入path数组
