@@ -3,26 +3,69 @@
    https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/
 */
 #include "utils/TreeNode.h"
+#include <cassert>
 #include <vector>
 using namespace std;
 
-void traversal(TreeNode *root, const int target, vector<int> &path) {
+void traversal(TreeNode *root, TreeNode *target, vector<TreeNode *> &record,
+               vector<TreeNode *> &path) {
     if (root == nullptr)
         return;
 
-    path.push_back(root->val);
+    record.push_back(root);
 
-    if (root->left == nullptr && root->right == nullptr)
+    if (root->val == target->val) {
+        for (TreeNode *node : record)
+            path.push_back(node);
         return;
-
-    if (root->left != nullptr) {
-        traversal(root->left, target, path);
-        path.pop_back();
-    }
-    if (root->right != nullptr) {
-        traversal(root->right, target, path);
-        path.pop_back();
+    } else {
+        if (root->left != nullptr) {
+            traversal(root->left, target, record, path);
+            record.pop_back();
+        }
+        if (root->right != nullptr) {
+            traversal(root->right, target, record, path);
+            record.pop_back();
+        }
     }
 }
 
-TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {}
+TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
+    vector<TreeNode *> record;
+
+    vector<TreeNode *> p_path;
+    traversal(root, p, record, p_path);
+
+    record.clear();
+    vector<TreeNode *> q_path;
+    traversal(root, q, record, q_path);
+
+    int size = min(p_path.size(), q_path.size());
+    int index = -1;
+    for (int i = 0; i < size; i++) {
+        if (p_path[i]->val == q_path[i]->val)
+            index = i;
+        else
+            break;
+    }
+
+    return p_path[index];
+}
+
+int main(int argc, char *argv[]) {
+    TreeNode *root = new TreeNode(3);
+    root->left = new TreeNode(5);
+    root->right = new TreeNode(1);
+    root->left->left = new TreeNode(6);
+    root->left->right = new TreeNode(2);
+    root->right->left = new TreeNode(0);
+    root->right->right = new TreeNode(8);
+    root->left->right->left = new TreeNode(7);
+    root->left->right->right = new TreeNode(4);
+
+    TreeNode *res =
+        lowestCommonAncestor(root, root->left, root->left->right->right);
+
+    assert(res == root->left);
+    return 0;
+}
