@@ -4,6 +4,7 @@
 */
 #include "utils/TreeNode.h"
 #include <cassert>
+#include <pthread.h>
 #include <vector>
 using namespace std;
 
@@ -52,6 +53,22 @@ TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
     return p_path[index];
 }
 
+TreeNode *lowestCommonAncestor2(TreeNode *root, TreeNode *p, TreeNode *q) {
+    if (root == p || root == q || root == nullptr)
+        return root;
+
+    TreeNode *left = lowestCommonAncestor2(root->left, p, q);
+    TreeNode *right = lowestCommonAncestor2(root->right, p, q);
+    if (left != nullptr && right != nullptr)
+        return root;
+    if (left == nullptr && right != nullptr)
+        return right;
+    else if (left != nullptr && right == nullptr)
+        return left;
+    else
+        return nullptr;
+}
+
 int main(int argc, char *argv[]) {
     TreeNode *root = new TreeNode(3);
     root->left = new TreeNode(5);
@@ -63,9 +80,13 @@ int main(int argc, char *argv[]) {
     root->left->right->left = new TreeNode(7);
     root->left->right->right = new TreeNode(4);
 
-    TreeNode *res =
+    TreeNode *res1 =
         lowestCommonAncestor(root, root->left, root->left->right->right);
 
-    assert(res == root->left);
+    TreeNode *res2 =
+        lowestCommonAncestor2(root, root->left, root->left->right->right);
+
+    assert(res1 == root->left);
+    assert(res2 == root->left);
     return 0;
 }
