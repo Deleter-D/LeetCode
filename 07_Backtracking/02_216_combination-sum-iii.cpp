@@ -5,12 +5,15 @@
 #include <vector>
 using namespace std;
 
-void backtracking(vector<int> &path, int sum, vector<vector<int>> &res, int k,
-                  int n, int startIdx) {
-    if (sum > n) { // 剪枝
+vector<vector<int>> res;
+vector<int> path;
+int sum = 0;
+
+void backtracing(int k, int n, int startIdx) {
+    if (sum > n)
         return;
-    }
-    if (path.size() == k) { // 终止条件
+
+    if (path.size() == k) {
         if (sum == n)
             res.push_back(path);
         return;
@@ -19,27 +22,23 @@ void backtracking(vector<int> &path, int sum, vector<vector<int>> &res, int k,
     for (int i = startIdx; i <= 9; i++) {
         path.push_back(i);
         sum += i;
-        backtracking(path, sum, res, k, n, i + 1);
-        sum -= i;        // 回溯
-        path.pop_back(); // 回溯
+        backtracing(k, n, i + 1);
+        sum -= i;
+        path.pop_back();
     }
 }
-
 vector<vector<int>> combinationSum3(int k, int n) {
-    vector<vector<int>> res;
-    vector<int> path;
-    backtracking(path, 0, res, k, n, 1);
-
+    backtracing(k, n, 1);
     return res;
 }
 
 int main(int argc, char *argv[]) {
-    int k = 3;
-    int n = 7;
+    int k = 9, n = 45;
     vector<vector<int>> res = combinationSum3(k, n);
-    for (vector<int> vec : res) {
-        for (int num : vec) {
-            cout << num << " ";
+
+    for (auto vec : res) {
+        for (auto i : vec) {
+            cout << i << " ";
         }
         cout << endl;
     }
