@@ -7,7 +7,7 @@
 using namespace std;
 
 int max_count = 0;
-int count = 0;
+int my_count = 0;
 TreeNode *pre_node = nullptr;
 
 void traversal(TreeNode *root, vector<int> &res) {
@@ -18,22 +18,22 @@ void traversal(TreeNode *root, vector<int> &res) {
 
     if (pre_node == nullptr) {
         // first node
-        count = 1;
+        my_count = 1;
     } else if (pre_node->val == root->val) {
         // same value with previous node
-        count++;
+        my_count++;
     } else {
         // don't same
-        count = 1;
+        my_count = 1;
     }
     pre_node = root;
 
-    if (count == max_count) {
+    if (my_count == max_count) {
         res.push_back(root->val);
     }
 
-    if (count > max_count) {
-        max_count = count;
+    if (my_count > max_count) {
+        max_count = my_count;
         res.clear(); // most important step
         res.push_back(root->val);
     }
