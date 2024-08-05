@@ -11,7 +11,7 @@ int integerBreak(int n) {
 
     dp[2] = 1;
     for (int i = 3; i <= n; i++) {
-        for (int j = 1; j < i - j; j++) {
+        for (int j = 1; j <= i / 2; j++) {
             dp[i] = std::max(dp[i], std::max((i - j) * j, dp[i - j] * j));
             printDP(dp);
         }
@@ -21,7 +21,7 @@ int integerBreak(int n) {
 }
 
 int main(int argc, char *argv[]) {
-    int res = integerBreak(10);
+    int res = integerBreak(4);
 
     std::cout << res << std::endl;
 
