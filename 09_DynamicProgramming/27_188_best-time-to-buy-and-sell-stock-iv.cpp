@@ -10,9 +10,9 @@ int maxProfit(int k, std::vector<int> &prices) {
 
     for (int i = 0; i < k * 2 + 1; i++) {
         if (i % 2 == 0)
-            dp[0][i] = 0;
+            dp[0][i] = 0; // the kth time don't hold stocks
         else
-            dp[0][i] = -prices[0];
+            dp[0][i] = -prices[0]; // the kth time hold stocks
     }
 
     for (int i = 1; i < prices.size(); i++) {

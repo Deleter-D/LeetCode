@@ -8,11 +8,11 @@
 int maxProfit(std::vector<int> &prices) {
     std::vector<std::vector<int>> dp(prices.size(), std::vector<int>(5, 0));
 
-    dp[0][0] = 0;
-    dp[0][1] = -prices[0];
-    dp[0][2] = 0;
-    dp[0][3] = -prices[0];
-    dp[0][4] = 0;
+    dp[0][0] = 0;          // not operate
+    dp[0][1] = -prices[0]; // the first time hold stocks
+    dp[0][2] = 0;          // the first time don't hold stocks
+    dp[0][3] = -prices[0]; // the second time hold stocks
+    dp[0][4] = 0;          // the second time don't hold stocks
 
     for (int i = 1; i < prices.size(); i++) {
         dp[i][0] = dp[i - 1][0];
