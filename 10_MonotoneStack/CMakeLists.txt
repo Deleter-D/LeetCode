@@ -1,5 +1,4 @@
-set(current_path ${CMAKE_CURRENT_SOURCE_DIR})
-get_filename_component(current_dir_name ${current_path} NAME)
+get_filename_component(current_dir_name ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 
 file(GLOB current_dir_sources RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "*.cpp")
 include("${CMAKE_SOURCE_DIR}/cmake/StringUtils.cmake")
