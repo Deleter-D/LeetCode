@@ -9,12 +9,11 @@
 
 std::vector<int> dailyTemperatures(std::vector<int> &temperatures) {
     std::stack<int> st;
-
     std::vector<int> res(temperatures.size(), 0);
 
     st.push(0);
 
-    for (int i = 0; i < temperatures.size(); i++) {
+    for (int i = 1; i < temperatures.size(); i++) {
         if (temperatures[i] < temperatures[st.top()]) {
             st.push(i);
         } else if (temperatures[i] == temperatures[st.top()]) {
