@@ -1,6 +1,7 @@
 /*
     Topic link: https://leetcode.cn/problems/merge-intervals/
 */
+#include <algorithm>
 #include <iostream>
 #include <vector>
 
