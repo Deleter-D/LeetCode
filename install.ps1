@@ -1,9 +1,12 @@
-#!/bin/bash
-
-mkdir build
+if(-not (Test-Path "./build"))
+{
+    mkdir build
+}
 
 cd ./build/
 cmake .. -G "MinGW Makefiles"
 
-mingw32-make -j32
-mingw32-make install
+make -j32
+make install
+
+cd ..
